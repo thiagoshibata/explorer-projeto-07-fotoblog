@@ -25,8 +25,16 @@
             <li class="active">Galeria</li>
           </ul>
         </nav>
-        <form action="">
-          <input type="text" value="search" />
+        <form>
+          <div class="input-wrapper">
+            <!-- embora o label nao esteja no layout do projeto, é importante que se coloque de forma oculpa por uma questão de acessibilidade. O placeholder do input nao pode ser lido pelo navegador, mas o label sim. -->
+            <label for="search">Pesquise por imagens e coleções</label>
+            <input
+              id="search"
+              type="text"
+              placeholder="Pesquise por imagens e coleções"
+            />
+          </div>
         </form>
         <img
           class="avatar"

@@ -39,9 +39,56 @@ body {
   margin: 0 auto;
 }
 
+/* start header */
+header,
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+  font-weight: 700;
+}
+
+header form {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 1.8rem;
+  color: var(--color-base-gray-300);
+}
+
+ul li.active {
+  color: var(--color-base-gray-900);
+}
+
+/* estilizando a imagem de perfil - avatar */
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+/* end header */
+
+/* start main */
 main {
   /* haverá rolagem somente no main */
   overflow: scroll;
 
   background-color: var(--color-base-gray-100);
 }
+/* end main */
+
+/* start footer */
+
+footer p {
+  text-align: center;
+  color: #323238;
+  font-weight: 600;
+}
+
+/* end footer */

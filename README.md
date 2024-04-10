@@ -1,9 +1,3 @@
-<style>
-img {
-  margin-bottom: 32px;
-}
-</style>
-
 <h1 style="text-align: center">Fogoblog</h1>
 
 <img src="./assets/capa-fotoblog Grande.jpeg"/>

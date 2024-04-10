@@ -137,14 +137,29 @@ main h1 {
   aspect-ratio: 16/9;
   /* enquadrando foto no espaço */
   object-fit: cover;
+
+  display: block;
+
+  /* transição dos efeitos da imagem */
+  /* transition-property: transform, filter;
+  transition-duration: 200ms;
+  transition-delay: 0;
+  transition-timing-function: ease-out; */
+  /* -- ou dessa outra forma:  */
+  /* transition: filter 200ms ease-out, transform 600ms ease-in; */
+  transition: all 200ms ease-out;
 }
 
 .item img:hover {
   filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
 }
 
 .details {
   padding: 2.2rem;
+  background-color: var(--color-base-white);
+  z-index: 1;
+  position: relative;
 }
 
 .details h2 {
@@ -180,3 +195,36 @@ footer p {
 }
 
 /* end footer */
+
+/* --ANIMAÇÕES-- */
+
+header {
+  --startY: -100%;
+  animation: move 0.2s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 0.2s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.item {
+  --delay: 0.4s;
+  animation: appear 0.4s var(--delay) backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
